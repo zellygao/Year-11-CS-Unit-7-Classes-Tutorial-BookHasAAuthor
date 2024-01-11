@@ -1,9 +1,6 @@
-import org.junit.Test;
-
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
-
-
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 public class AuthorBookTester {
 
     Author author;
@@ -22,21 +19,21 @@ public class AuthorBookTester {
     @Test
     public void testAuthorConstructorName() {
         setUp();
-        assertTrue("Ensure that your constructor in your Author class has been implemented correctly!", author.getName().equals("Philip K Dick"));
+        assertTrue(author.getName().equals("Philip K Dick"), "Ensure that your constructor in your Author class has been implemented correctly!");
         tearDown();
     }
 
     @Test
     public void testAuthorConstructorEmail() {
         setUp();
-        assertTrue("Ensure that your constructor in your Author class has been implemented correctly!", author.getEmail().equals("pkd@gmail.com"));
+        assertTrue(author.getEmail().equals("pkd@gmail.com"), "Ensure that your constructor in your Author class has been implemented correctly!");
         tearDown();
     }
 
     @Test
     public void testAuthorConstructorGender() {
         setUp();
-        assertTrue("Ensure that your constructor in your Author class has been implemented correctly!", author.getGender() == 'm');
+        assertTrue(author.getGender() == 'm', "Ensure that your constructor in your Author class has been implemented correctly!");
         tearDown();
     }
 
@@ -44,63 +41,63 @@ public class AuthorBookTester {
     public void testAuthorSetEmail() {
         setUp();
         author.setEmail("pkd@cis.edu.hk");
-        assertTrue("Ensure that your setEmail method in your Author class has been implemented correctly!", author.getEmail().equals("pkd@cis.edu.hk"));
+        assertTrue(author.getEmail().equals("pkd@cis.edu.hk"), "Ensure that your setEmail method in your Author class has been implemented correctly!");
         tearDown();
     }
 
     @Test
     public void testAuthorToString() {
         setUp();
-        assertTrue("Ensure that your constructor in your Author class has been implemented correctly!", author.toString().equals("Philip K Dick (m) at pkd@gmail.com"));
+        assertTrue(author.toString().equals("Philip K Dick (m) at pkd@gmail.com"), "Ensure that your constructor in your Author class has been implemented correctly!");
         tearDown();
     }
 
     @Test
     public void testBookConstructorName() {
         setUp();
-        assertTrue("Ensure that your constructor in your Book class has been implemented correctly!", book.getName().equals("The Man in the High Castle"));
+        assertTrue(book.getName().equals("The Man in the High Castle"), "Ensure that your constructor in your Book class has been implemented correctly!");
         tearDown();
     }
 
     @Test
     public void testBookConstructorAuthor() {
         setUp();
-        assertTrue("Ensure that your constructor in your Book class has been implemented correctly!", book.getAuthor().toString().equals("Philip K Dick (m) at pkd@gmail.com"));
+        assertTrue(book.getAuthor().toString().equals("Philip K Dick (m) at pkd@gmail.com"), "Ensure that your constructor in your Book class has been implemented correctly!");
         tearDown();
     }
 
     @Test
     public void testBookConstructorPrice() {
         setUp();
-        assertTrue("Ensure that your constructor in your Book class has been implemented correctly!", book.getPrice() == 100);
+        assertTrue(book.getPrice() == 100, "Ensure that your constructor in your Book class has been implemented correctly!");
         tearDown();
     }
 
     @Test
     public void testBookConstructorQuantity() {
         setUp();
-        assertTrue("Ensure that your constructor in your Book class has been implemented correctly!", book.getQty() == 10);
+        assertTrue(book.getQty() == 10, "Ensure that your constructor in your Book class has been implemented correctly!");
         tearDown();
     }
 
     @Test
     public void testBookGetName() {
         setUp();
-        assertTrue("Ensure that your getName method in your Book class has been implemented correctly!", book.getName().equals("The Man in the High Castle"));
+        assertTrue(book.getName().equals("The Man in the High Castle"), "Ensure that your getName method in your Book class has been implemented correctly!");
         tearDown();
     }
 
     @Test
     public void testBookGetAuthor() {
         setUp();
-        assertEquals("Ensure that your getAuthor method in your Book class has been implemented correctly!", "Philip K Dick (m) at pkd@gmail.com", book.getAuthor().toString());
+        assertEquals("Philip K Dick (m) at pkd@gmail.com", book.getAuthor().toString(), "Ensure that your getAuthor method in your Book class has been implemented correctly!");
         tearDown();
     }
 
     @Test
     public void testBookGetPrice() {
         setUp();
-        assertTrue("Ensure that your getPrice method in your Book class has been implemented correctly!", book.getPrice() == 100);
+        assertTrue(book.getPrice() == 100, "Ensure that your getPrice method in your Book class has been implemented correctly!");
         tearDown();
     }
 
@@ -108,14 +105,14 @@ public class AuthorBookTester {
     public void testBookSetPrice() {
         setUp();
         book.setPrice(150);
-        assertTrue("Ensure that your setPrice method in your Book class has been implemented correctly!", book.getPrice() == 150);
+        assertTrue(book.getPrice() == 150, "Ensure that your setPrice method in your Book class has been implemented correctly!");
         tearDown();
     }
 
     @Test
     public void testBookGetQty() {
         setUp();
-        assertTrue("Ensure that your getQty method in your Book class has been implemented correctly!", book.getQty() == 10);
+        assertTrue(book.getQty() == 10, "Ensure that your getQty method in your Book class has been implemented correctly!");
         tearDown();
     }
 
@@ -123,14 +120,14 @@ public class AuthorBookTester {
     public void testBookSetQty() {
         setUp();
         book.setQty(20);
-        assertTrue("Ensure that your setQty method in your Book class has been implemented correctly!", book.getQty() == 20);
+        assertTrue(book.getQty() == 20, "Ensure that your setQty method in your Book class has been implemented correctly!");
         tearDown();
     }
 
     @Test
     public void testBookToString() {
         setUp();
-        assertEquals("Ensure that your toString method in your Book class has been implemented correctly!", "'The Man in the High Castle' by Philip K Dick (m) at pkd@gmail.com", book.toString());
+        assertEquals("'The Man in the High Castle' by Philip K Dick (m) at pkd@gmail.com", book.toString(), "Ensure that your toString method in your Book class has been implemented correctly!");
         tearDown();
     }
 
